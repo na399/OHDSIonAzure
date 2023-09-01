@@ -231,7 +231,7 @@
             "enabled": true,
             "retentionPolicy": {
               "days": 30,
-              "enabled": true
+              "enabled": false
             }
           }
         ]
@@ -662,7 +662,7 @@
                       "enabled": true,
                       "retentionPolicy": {
                         "days": 30,
-                        "enabled": true
+                        "enabled": false
                       }
                     }
                   }
@@ -1048,7 +1048,7 @@
                       "enabled": true,
                       "retentionPolicy": {
                         "days": 30,
-                        "enabled": true
+                        "enabled": false
                       }
                     }
                   }
@@ -1901,7 +1901,7 @@
                       "enabled": true,
                       "retentionPolicy": {
                         "days": 30,
-                        "enabled": true
+                        "enabled": false
                       }
                     }
                   }
