@@ -19,7 +19,8 @@ do
     else
         # shellcheck disable=SC2016
         atlaspw=$(htpasswd -bnBC 4 "" "$i" | tr -d ':\n' | sed 's/$2y/$2a/')
-        psql -v ON_ERROR_STOP=1 -e "$OHDSI_ADMIN_CONNECTION_STRING" -c "insert into webapi_security.security (email,password) values ('$username', E'$atlaspw');"
+        # psql -v ON_ERROR_STOP=1 -e "$OHDSI_ADMIN_CONNECTION_STRING" -c "insert into webapi_security.security (email,password) values ('$username', E'$atlaspw');"
+        psql -e "$OHDSI_ADMIN_CONNECTION_STRING" -c "insert into webapi_security.security (email,password) values ('$username', E'$atlaspw');"
         # this step adds some required rows/ids in the db
         curl "$WEBAPI_URL/user/login/db" --data-urlencode "login=$username" --data-urlencode "password=$i" --fail
 
